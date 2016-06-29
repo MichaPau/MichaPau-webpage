@@ -1,0 +1,57 @@
+main {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: flex-start;
+}
+main > div {
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	padding: .3em .7em;
+	margin: 1.5em 1.5em 0 0;
+	color: #000;
+	font-size: 1.5em;
+}
+a {
+	text-decoration: underline;
+}
+main > h1, h2, h3, p {
+	flex: 1 0 100%;
+	text-align: center;
+}
+.semi-trans-border {
+	border: 10px solid hsla(450, 0%, 100%, 0.5);
+	background-color: white;
+	background-clip: padding-box;
+}
+.multi-border-shadow {
+	background: yellowgreen;
+	box-shadow: 0 0 0 .5em #655 inset,
+				0 0 0 1em deeppink inset,
+				0 2px 5px 10px rgba(0,0,0,.5);
+	/* add more padding for the bow-shadow is inset*/
+	padding: 1.3em 1.7em;
+}
+.outline-double-border {
+	background: yellowgreen;
+	border: .5em solid #655;
+	outline: .5em solid deeppink;
+	
+	/*add more margin for the outline*/
+	margin: 1.5em 1.5em .5em .5em;
+}
+.outline-stitching {
+	background: #655;
+	outline: 2px dashed white;
+	outline-offset: -.5em;
+	padding: .8em 1.2em;
+}
+
+.inside-radius-border {
+	background: tan;
+	border-radius: 0.4em;
+	
+	box-shadow: 0 0 0 .3em #655;
+	outline: .6em solid #655;
+}

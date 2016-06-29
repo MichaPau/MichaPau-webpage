@@ -1,0 +1,86 @@
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+img.blog-img {
+	display: inline-block;
+	height: 4.2em;
+	width: auto;
+	margin-right: .5em;
+}
+.post-container {
+	
+	flex: 1 0 32%;
+	min-width: 250px;
+	/*max-width: 32%;*/
+	margin: .5em;
+}
+.excerpt-container {
+	display: flex;
+	margin-top: .5em;
+	height: 4.2em; 
+}
+.more {
+	align-self: flex-end;
+}
+article {
+	display: flex;
+	flex-direction: column;
+	background: rgba(8, 28, 42, 1);
+	padding: .2em .5em;
+	height: 125px;
+	
+}
+/*h1, h2 {
+	font-size: 1em;
+}*/
+
+
+/*
+Multi line text truncation hack from:
+http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/
+*/
+div.post-excerpt {
+  /* hide text if it more than N lines  */
+  align-self: flex-start;
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.4em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 4.2em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;  
+  /* place for '...' */
+  margin-right: 1em;
+  padding-right: 1em;
+}
+/* create the ... */
+div.post-excerpt:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+div.post-excerpt:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: rgba(8, 28, 42, 1);
+}

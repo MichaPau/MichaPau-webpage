@@ -1,0 +1,23 @@
+<h1>Sound</h1>
+<div class="collection-container">
+{% assign sorted_exh = (site.exhibitions | sort: 'date') | reverse %}
+{% for project in sorted_exh %}
+{% if project.category == 'sound' %}
+<div class="post-container">
+	<time datetime="{{ project.date | date_to_xmlschema }}" itemprop="datePublished">{{ project.date | date: "%b %-d, %Y" }}</time>
+	<article class="bg-sound">
+	  <header><a href="{{site.baseurl}}{{project.url}}">{{ project.title }}</a></header>
+	  <div class="excerpt-container">
+		{% if project.thumbnail %}
+		  <img class="blog-img" src="{{site.baseurl}}/assets/img/thumbnails/{{project.thumbnail}}">
+		{% endif %}
+		  <div class="post-excerpt">
+		  {{ project.description }}
+		  </div>
+	  </div>
+	  <a href="{{site.baseurl}}{{project.url}}" class="more">more...</a>
+	</article>
+</div>
+{% endif %}
+{% endfor %}
+</div>

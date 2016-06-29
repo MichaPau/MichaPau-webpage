@@ -1,0 +1,28 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+encoding: utf-8
+title: MichaPau
+email: contact@michapau.net
+description: # this means to ignore newlines until "baseurl:"
+  Web and Software developer based in Rennes, Brittany.
+  This is a portfolio, exhibition and bloging site.
+  Web et software développeur à Rennes en Bretagne.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.michapau.net" # the base hostname & protocol for your site
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+#collections
+collections:
+ exhibitions:
+  output: true
+  permalink: /:collection/:path:output_ext

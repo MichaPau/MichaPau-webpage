@@ -1,0 +1,38 @@
+<nav class="navigation">
+	<div class="menu" role="menubar">
+		<div class="logo menu-item" role="presentation"><a href="{{site.baseurl}}/" tabindex="-1"><img src="{{site.baseurl}}/assets/img/tree_logo_02.png" width="100" alt="logo in form of a pythagoras tree"/></a></div>
+		<div class="menu-container" role="presentation">
+			<div class="menu-item {% if page.url == '/'%}active{% endif %}" role="presentation">
+				<a href="{{site.baseurl}}/" role="menuitem">Home</a>
+			</div>
+			<div class="menu-item {% if page.url == '/blog/'%}active{% endif %}" role="presentation">
+				<a href="{{site.baseurl}}/blog/" role="menuitem">Blog</a>
+			</div>
+			<div class="menu-item {% if page.url == '/exhibitions/'%}active{% endif %}" role="presentation">
+				<a href="{{site.baseurl}}/exhibitions/" role="menuitem">Exhibition</a>
+				<div class="submenu" role="menu">
+					<div {% if page.url == '/exhibitions/web/'%}class="active"{% endif %} role="presentation">
+						<a href="{{site.baseurl}}/exhibitions/web/" role="menuitem">Web</a>
+					</div>
+					<div {% if page.url == '/exhibitions/processing/'%}class="active"{% endif %} role="presentation">
+						<a href="{{site.baseurl}}/exhibitions/processing/" role="menuitem">Processing</a>
+					</div>
+					<div {% if page.url == '/exhibitions/sound/'%}class="active"{% endif %} role="presentation">
+						<a href="{{site.baseurl}}/exhibitions/sound/" role="menuitem">Sound</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-container" role="presentation">
+			<div class="menu-item {% if page.url == '/curriculum/'%}active{% endif %}" role="presentation">
+				<a href="{{site.baseurl}}/curriculum/" role="menuitem">Curriculum</a>
+			</div>
+			<div class="menu-item {% if page.url == '/links_n_info/'%}active{% endif %}" role="presentation">
+				<a href="{{site.baseurl}}/links_n_info/" role="menuitem">Links&Info</a>
+			</div>
+			<div class="menu-item {% if page.url == '/contact/'%}active{% endif %}" role="presentation">
+				<a href="{{site.baseurl}}/contact/" role="menuitem">Contact</a>
+			</div>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,28 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+#canvasContainer {
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border: 0.5px solid rgb(0, 43, 54);
+}
+#guiContainer {
+  margin-top: 0.5em;
+}
+p {
+  text-align: center;
+}
+#disqus_thread {
+	width: 100%;
+}
+.full-width-item {
+	width: 100%;
+}
+.center-text {
+	text-align: center;
+}

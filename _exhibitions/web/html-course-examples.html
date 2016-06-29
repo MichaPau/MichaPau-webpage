@@ -1,0 +1,108 @@
+---
+layout: page
+title: HTML5 Course examples
+category: web
+date: 2016-03-28
+stylesheet: collections/section-list.css
+description: Examples from the EdX HTML5 Course
+thumbnail: html5_examples_thumb_01.png
+---
+<h1>This is a list of some my examples from the EdX HTML5 course I took some time ago.</h1>
+<p>
+	Some of them will be integrated in the upcoming version of this course on EdX.
+	Be aware that some examples are prototypes I made some time ago. It may not always reflect absolute best practice.
+
+</p>
+<section>
+	<h2>HTML5 Video API</h2>
+	<article>
+		<h2>Video Player interaction</h2>
+		<div class="excerpt-container">
+			<div><img src="{{site.baseurl}}/assets/img/thumbnails/video_player_thumb_01.png" alt="Video Player interaction thumbnail"></div>
+			<p>
+				This is an example which shows some interaction on the timerupdate event in the form of speech bubbles which comment a movie trailer.
+				It has some custom video controls in form of a remote control and other features for the video player.
+			</p>
+		</div>
+		<a href="http://www.michapau.net/projects/htmldemos/video/videoPlayer.html" target="_blank">See the video play in action (opens in a new tab).</a>
+	</article>
+	<article>
+		<h2>Video chapter navigation</h2>
+		<div class="excerpt-container">
+			<div><img src="{{site.baseurl}}/assets/img/thumbnails/video_nav_thumb_01.png" alt="Video navigation thumbnail"></div>
+			<p>
+				This example uses a vtt track to navigate in a video. This allows to navigate the video in a chapter like manner.
+				In the moment there is a problem with firefox due the unsupported cuechange event.
+			</p>
+		</div>
+		<a href="http://www.michapau.net/projects/htmldemos/video/Chapter_Video_Player.html" target="_blank">See the video play in action (opens in a new tab).</a>
+	</article>
+</section>
+<section>
+	<h2>HTML5 Canvas</h2>
+	<article>
+		<h2>Canvas histogram animation</h2>
+		<div class="excerpt-container">
+			<div><img src="{{site.baseurl}}/assets/img/thumbnails/canvas_histogram_thumb_01.png" alt="Canvas histogram thumbnail"></div>
+			<p>
+				Animated histogram prototype on the canvas.
+			</p>
+		</div>
+		<a href="https://jsbin.com/gabayapomi/edit?html,output" target="_blank">Link to JS Bin (opens in a new tab)</a>
+	</article>
+	<article>
+		<h2>Canvas Selfi Application</h2>
+		<div class="excerpt-container">
+			<div><img src="{{site.baseurl}}/assets/img/thumbnails/selfi_app_thumb_01.png" alt="Selfi application thumbnail"></div>
+			<p>
+				This is a selfi application. It uses the camera, the canvas, WebGL for rendering and pixi.js for the filters.
+				It has 2 modes - normal and rendered in a polaroid frame.  <br>
+				In the moment <span class="important">this works only in Firefox</span> because:<br>
+				1. Chrome and Opera doesn't allow getUserMedia anymore without a SSL connection. (I won't purchase a certificate only for this example).<br>
+				2. Internet Explorer doesn't support getUserMedia at all.<br>
+				<br>
+				(1) will just fail silently for the user (error shows only in the console).
+			</p>
+		</div>
+		<a href="http://www.michapau.net/projects/htmldemos/canvas/selfiApp.html" target="_blank">Use the selfi app (opens in a new tab)</a>
+	</article>
+	<article>
+		<h2>Canvas Ball Game</h2>
+		<div class="excerpt-container">
+			<div><img src="{{site.baseurl}}/assets/img/thumbnails/game_thumb_01.png" alt="Canvas game thumbnail"></div>
+			<p>
+				Simple ball game rendered on the canvas. This was a playground for canvas animation, collision detection etc.
+				Surly it's not an addictive great game but the goal was to play around with that stuff and make something actually playable.
+				That was as well a possibility to use sound samples and try out the HTML5 Audio API.
+			</p>
+		</div>
+		<a href="http://www.michapau.net/projects/htmldemos/games/game.html" target="_blank">Play the canvas game (opens in a new tab)</a>
+	</article>
+</section>
+<section>
+	<h2>IndexedDB</h2>
+	<article>
+		<h2>Kanban example</h2>
+		<div class="excerpt-container">
+			<div><img src="{{site.baseurl}}/assets/img/thumbnails/kanban_thumb_01.png" alt="Kanban thumbnail"></div>
+			<p>
+				As an example for indexedDB I choose to make a Kanban board. As a prototype it is very simple.
+				But perhaps I will port my <a href="https://github.com/MichaPau/Kanban">Kanban project</a> made with Flex and Robotlegs to an HTML5 version.
+			</p>
+		</div>
+		<a href="http://www.michapau.net/projects/htmldemos/indexeddb/Kanban.html" target="_blank">Try the Kanban (opens in a new tab)</a>
+	</article>
+</section>
+<section>
+	<h2>Drag and drop</h2>
+	<article>
+		<h2>Scrabble letters drag and drop</h2>
+		<div class="excerpt-container">
+			<div><img src="{{site.baseurl}}/assets/img/thumbnails/scrabble_thumb_01.png" alt="Drag and drop example thumbnail"></div>
+			<p>
+				Drag and drop example. The goal was to drag scrabble letters until the right word is formed.
+			</p>
+		</div>
+		<a href="http://codepen.io/anon/pen/WrRYdV" target="_blank">Link to the example on codepen (opens in a new tab)</a>
+	</article>
+</section>

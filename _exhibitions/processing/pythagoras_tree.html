@@ -1,0 +1,28 @@
+---
+layout: page
+title: Pythagoras tree
+category: processing
+date: 2016-03-23
+body-js: p5/pythagoras_tree.js
+head-js: p5.min.js
+stylesheet: centerContent.css
+thumbnail: pythagoras_thumb_01.png
+description: Processing sketch. Animated pythagoras tree implementation
+---
+<h1>Pythagoras tree</h1>
+<p class="center-text">
+	Angles are calculated with <a href="https://en.wikipedia.org/wiki/Perlin_noise">Perlin noise</a>.<br>
+	What gives the animation some kind of coral/plant hyprid impression. <br>
+	Move the mouse to change the color hues..
+</p>
+<div id="canvasContainer"></div>
+<p class="center-text">
+	I am using the p5.js library here. Processing.js was too slow for some reason.<br>
+	Downside for this sketch is that p5.js doesn't support gradient fills on Vertex points. So the squares are only single color.
+</p>
+<!--
+<canvas id="pdeCanvas2" data-processing-sources="{{site.baseurl}}/assets/pde/pythagorasTree_web_02.pde" onclick="switchSketchState(flag = !flag, 'pdeCanvas2');"></canvas>
+<canvas id="pdeCanvas" data-processing-sources="{{site.baseurl}}/assets/pde/pythagorasTree_web_01.pde" onclick="switchSketchState(flag = !flag, 'pdeCanvas');"></canvas>
+pythagorasTree_web_01.pde
+P3D_js_test.pde
+-->

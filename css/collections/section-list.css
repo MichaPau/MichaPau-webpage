@@ -1,0 +1,45 @@
+section {
+	display: flex;
+	flex-direction: column;
+}
+article {
+	display: flex;
+	flex-direction: column;
+	padding: .2em .5em;
+	border: 1px solid rgb(0, 43, 54);
+	margin: .5em .5em;
+}
+h2 {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+
+.excerpt-container {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin-top: .5em;
+}
+.excerpt-container > div {
+	flex: 0 1 200px;
+	max-width: 200px;
+}
+.excerpt-container > p {
+	flex: 1 1 0px;
+	min-width: 75%;
+	margin: 0;
+	padding-left: 1em;
+	text-align: left;
+}
+.excerpt-container  img {
+	width: 100%;
+	height: auto;
+	margin-top: 0.4em;
+	/*display: block;
+	object-fit: contain;
+	object-position: 0 .4em;*/
+	
+}

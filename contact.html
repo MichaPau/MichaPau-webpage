@@ -1,0 +1,17 @@
+---
+layout: default
+title: Contact
+stylesheet: contact.css
+description: Contact Michael Kittenberger - Webdeveloper
+head-js: contact.js
+---
+<div id="mail-container">
+<form id="form-container" action="{{site.baseurl}}/assets/php/mail.php" method="POST">
+	<div class="label-field-pair"><label for="name">Your name:</label><input id="name" name="name" type="text"></div>
+	<div class="label-field-pair"><label for="email">Your Email address:</label><input id="email" name="email" type="email"></div>
+	<div class="label-field-pair"><label for="subject">The subject (*):</label><input id="subject" name="subject" type="text" required></div>
+	<p class="antispam" aria-hidden="true">Leave this empty: <input type="text" name="url" /></p>
+	<div class="label-field-pair"><label for="message">Your message (*):</label><textarea id="message" name="message" required></textarea></div>
+	<div class="form-action-bottom"><div id="form-feedback"></div><button type="submit">Send</button></div>
+</form>
+</div>

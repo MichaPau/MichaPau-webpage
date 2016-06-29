@@ -1,0 +1,97 @@
+.collection-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin-bottom: 1em;
+}
+img.blog-img {
+	display: inline-block;
+	height: 4.2em;
+	max-height: 4.2em;
+	width: auto;
+	margin-right: .5em;
+}
+.post-container {
+
+	flex: 1 0 32%;
+	min-width: 250px;
+	/*max-width: 32%;*/
+	margin: .5em;
+}
+.excerpt-container {
+	display: flex;
+	margin-top: .5em;
+	height: 4.2em;
+}
+.more {
+	align-self: flex-end;
+}
+article {
+	display: flex;
+	flex-direction: column;
+	padding: .2em .5em;
+	height: 125px;
+
+}
+/*h2 {
+	font-size: 1.2em;
+	margin: 0;
+}*/
+
+.bg-web {
+	/*background-color: #54000e;*/
+	background-color: rgba(84,0,14, 0.5);
+}
+.bg-processing {
+	/*background-color: #dc9e01; rgb(84,0,14) rgb(0,49,80)*/
+	/*background-color: #003150;*/
+	background-color: rgba(0,49,80, 0.5);
+}
+.bg-sound {
+	background-color: rgba(0, 107, 58, 0.5);
+}
+div.post-excerpt {
+	align-self: flex-start;
+	overflow: hidden;
+	line-height: 1.4em;
+	max-height: 4.2em;
+	text-align: justify;
+	margin-right: 1em;
+	padding-right: 1em;
+}
+
+/*
+Multi line text truncation hack from:
+http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/
+
+unfortunatly it doesn't work with transparent backgrounds
+*/
+/*
+div.post-excerpt {
+  align-self: flex-start;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.4em;
+  max-height: 4.2em;
+  text-align: justify;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+div.post-excerpt:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+div.post-excerpt:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: inherit;
+}
+*/

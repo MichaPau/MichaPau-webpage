@@ -1,0 +1,14 @@
+---
+layout: page
+title: Penta spiral
+category: processing
+date: 2016-03-18
+head-js: start_stop_processing.js
+body-js: processing-1.4.8.min.js
+stylesheet: centerContent.css
+thumbnail: pentaspiral_thumb_01.png
+description: Processing sketch. Rotating pentagrams forming a spiral
+---
+<h1>Pentagramm spiral</h1>
+<p>Move the mouse to interact...</p>
+<canvas id="pdeCanvas" data-processing-sources="{{site.baseurl}}/assets/pde/penta_spiral_01.pde" onclick="switchSketchState(flag = !flag, 'pdeCanvas');"></canvas>
