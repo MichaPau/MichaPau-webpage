@@ -1,21 +1,17 @@
 ---
-layout: default
+layout: standalone
 title: Curriculum
-stylesheet: cv.css
+stylesheet: print.css
 description: Curriculum vitae - Michael Kittenberger
 ---
-
+<div class="mainContent" role="presentation">
 <h1>Curriculum vitae</h1>
-<div class="link-pane">
-	<a href="{{site.baseurl}}/curriculum_solo/" target="_blank">Print version</a>
-	<a href="{{site.baseurl}}/assets/pdf/Michael_Kittenberger_CV.pdf" target="_blank" style="margin-left: 1em;">PDF version</a>
-</div>
 <section class="section-layout">
 	<div class="header-wrapper color-space">
 		<h1 class="section-header">Information</h1>
 	</div>
-	<div class="section-content">
-		<div class="side-container shadow border-space">
+	<div class="section-content ">
+		<div class="side-container-print">
 			<img src="{{site.baseurl}}/assets/img/photo_me_01.png" alt="This is a photo of Michael Kittenberger." width="150">
 			<div class="social-container">
 				<a href="https://github.com/MichaPau" target="_blank"><img src="{{site.baseurl}}/assets/img/github_24.png"></a>
@@ -68,7 +64,7 @@ description: Curriculum vitae - Michael Kittenberger
 		</div>
 	</div>
 </section>
- <section class="section-layout">
+ <section class="section-layout pagebreak">
 	<div class="header-wrapper color-fire">
 		<h1 class="section-header">Skills</h1>
 	</div>
@@ -127,8 +123,8 @@ description: Curriculum vitae - Michael Kittenberger
 			<ul>
 				<li>Discovery Precalculus: A Creative and Connected Approach </li>
 				<li>Introduction to MongoDB using the MEAN stack</li>
-				<li>Goldsmiths University of London - Creative Programming for Audiovisual Art </li>
 				<li>Goldsmiths University of London - Machine Learning for Musicians and Artists </li>
+				<li>Goldsmiths University of London - Creative Programming for Audiovisual Art </li>
 			</ul>
 			<h3>Mook courses (finished)</h3>
 			<ul>
@@ -157,3 +153,4 @@ description: Curriculum vitae - Michael Kittenberger
 		 </div>
 	</div>
 </section>
+</div>

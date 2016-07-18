@@ -4,6 +4,16 @@ main {
 	justify-content: flex-start;
 	align-items: center;
 }
+main > * {
+	margin-bottom: 0.5em;
+}
+p {
+	margin-bottom: 1em;
+}
+canvas {
+	background: rgb(14, 14, 14);
+	border: 1px dashed rgb(51, 51, 51);
+}
 #canvasContainer {
 	display:flex;
 	flex-direction: column;
@@ -12,8 +22,42 @@ main {
 	border: 0.5px solid rgb(0, 43, 54);
 }
 #guiContainer {
-  margin-top: 0.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.8em;
 }
+#guiContainer > * {
+	margin-bottom: 0.5em;
+}
+.form-item {
+	width: 600px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.form-item > * {
+	flex: 1 0 auto;
+}
+.form-item > label {
+	flex: 0 0 80px;
+}
+.form-item > output {
+	flex: 0 0 50px;
+}
+.form-item button {
+	max-width: 2em;
+	padding: 0.1em;
+}
+#phasorDiv {
+	display: flex;
+	flex-direction: column;
+}
+/*#guiContainer {
+  margin-top: 0.5em;
+}*/
 p {
   text-align: center;
 }

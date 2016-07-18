@@ -1,0 +1,70 @@
+---
+layout: page
+title: Lores filter demo
+category: sound
+head-js:
+ - sound/maxiLib.js
+body-js: sound/examples/sound_lores_filter.js
+date: 2016-06-30
+stylesheet: centerContentSound.css
+thumbnail: sound_spectrum_thumb_01.png
+description: Lores filter demo
+---
+<h1>Lores filter example</h1>
+<p>
+  Use the sliders to play around. Check the phasor radio to phase the filter.
+  (keep phasor time and resonance rather low)
+</p>
+<canvas id="drawCanvas" style="background: #000"></canvas>
+<canvas id="fftCanvas" style="background: #000"></canvas>
+<div id="guiContainer">
+  <span>Sliders</span>
+  <div class="form-item">
+    <filedset>
+      <legend>Cutoff phasor</legend>
+      <label><input type="radio" name="phasor_radio" value="fix" onclick="togglePhasor(this)" checked="checked" autocomplete="off">use fix value</label>
+      <label><input type="radio" name="phasor_radio" value="phasor" onclick="togglePhasor(this)" autocomplete="off">use phasor</label>
+    </filedset>
+  </div>
+  <div class="form-item" id="cutoffDiv" style="display: flex;">
+    <label for="value1Slider">Cutoff (Hz.)</label>
+    <input id="value1Slider" name="value1SliderN" min="20" max="20000" step="1" value="1000" type="range" autocomplete="off" oninput="value1Output.value = value1Slider.value" onchange="value1Output.value = value1Slider.value">
+    <output id="value1Output">1000</output>
+    <button onclick="changeValue('value1Slider', 'value1Output', -10)">--</button>
+    <button onclick="changeValue('value1Slider', 'value1Output', -1)">-</button>
+    <button onclick="changeValue('value1Slider', 'value1Output', 1)">+</button>
+    <button onclick="changeValue('value1Slider', 'value1Output', 10)">++</button>
+  </div>
+  <div id="phasorDiv" style="display: none;">
+    <div class="form-item">
+      <label for="value3Slider">Phasor time</label>
+      <input id="value3Slider" name="valueSlider3N" min="0.1" max="500" step="0.1" value="0.1" type="range" autocomplete="off" oninput="value3Output.value = value3Slider.value" onchange="value3Output.value = value3Slider.value">
+      <output id="value3Output">0.1</output>
+      <button onclick="changeValue('value3Slider', 'value3Output', -10)">--</button>
+      <button onclick="changeValue('value3Slider', 'value3Output', -1)">-</button>
+      <button onclick="changeValue('value3Slider', 'value3Output', 1)">+</button>
+      <button onclick="changeValue('value3Slider', 'value3Output', 10)">++</button>
+    </div>
+    <div class="form-item">
+      <label for="value4Slider">Phasor mult</label>
+      <input id="value4Slider" name="valueSlider4N" min="0" max="10000" step="1" value="5000" type="range" autocomplete="off" oninput="value4Output.value = value4Slider.value" onchange="value4Output.value = value4Slider.value">
+      <output id="value4Output">5000</output>
+      <button onclick="changeValue('value4Slider', 'value4Output', -10)">--</button>
+      <button onclick="changeValue('value4Slider', 'value4Output', -1)">-</button>
+      <button onclick="changeValue('value4Slider', 'value4Output', 1)">+</button>
+      <button onclick="changeValue('value4Slider', 'value4Output', 10)">++</button>
+    </div>
+  </div>
+  <div class="form-item">
+    <label for="value2Slider">Resonance:</label>
+    <input id="value2Slider" name="value2Slider" min="1" max="5000" step="1" value="10" type="range" autocomplete="off" oninput="value2Output.value = value2Slider.value">
+    <output id="value2Output">10</output>
+    <button onclick="changeValue('value2Slider', 'value2Output', -10)">--</button>
+    <button onclick="changeValue('value2Slider', 'value2Output', -1)">-</button>
+    <button onclick="changeValue('value2Slider', 'value2Output', 1)">+</button>
+    <button onclick="changeValue('value2Slider', 'value2Output', 10)">++</button>
+  </div>
+</div>
+<p>
+  Play with the source code yourself on <a href="http://live.codecircle.com/d/ccLLx4Di8yCRsozuw">CodeCircle</a>
+</p>

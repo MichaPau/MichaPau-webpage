@@ -1,0 +1,29 @@
+---
+layout: default
+title: Subtractive synthesizer
+category: sound
+head-js:
+ - sound/maxiLib.js
+ - sound/noise2.js
+ - sound/simpleVisual_03.js
+body-js: sound/examples/sound_03.js
+date: 2016-07-07
+stylesheet: centerContentSound.css
+thumbnail: sound_spectrum_thumb_01.png
+description: Third assignment for the Kadenze Creative Programming for AudioVisual Art course. Example with lores filter and sample loading.
+---
+<h1>Lores filter and sample loading - Third example</h1>
+<p>
+  Third assignment for the
+  <a href="https://www.kadenze.com/courses/creative-programming-for-audiovisual-art/info">Kadenze Creative Programming for AudioVisual Art</a> Mook course.
+  <br>
+  The instruction was to create a traditional monophonic subtractive synthesizer using at least one oscilator, one filter and four samples.
+</p>
+<canvas id="drawCanvas" style="background: #000"></canvas>
+<canvas id="fftCanvas" style="background: #000"></canvas>
+<div id="guiContainer">
+  <button onclick="togglePlay()">Toggle Play</button>
+</div>
+<p>
+  <!--Code source on <a href="http://live.codecircle.com/d/dEhG6kQxuipconKyC">CodeCircle</a>-->
+</p>

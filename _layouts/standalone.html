@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"{% if page.fb-img %} xmlns:fb="http://ogp.me/ns/fb#"{% endif %}>
+<html lang="en">
 <head>
     {% capture page_description %}
     {% if page.description %}
@@ -17,7 +17,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="Content-Language" content="en,fr">
 
-    {% if page.fb-img %}<meta property="og:image" content="{{site.url}}/{{page.fb-img}}"/>{% endif %}
     <meta name="description" content="{{ page_description }}">
     <title>{{site.title}}{% if page.title %} - {{page.title}}{% endif %}</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
@@ -43,21 +42,6 @@
 
 </head>
 <body>
-  <div class="mainContent" role="presentation">
-    <header>
-       {% include navigation.html %}
-    </header>
-    <main>
-        {{content}}
-    </main>
-    <footer>{% include footer.html %}</footer>
-    <!-- custom javascript at the end of the body-->
-    {% if page.body-js %}
-    <script src="{{site.baseurl}}/js/{{ page.body-js }}"></script>
-    {% endif %}
-    {% if layout.body-js %}
-    <script src="{{site.baseurl}}/js/{{ layout.body-js }}"></script>
-    {% endif %}
-  </div>
+  {{content}}
 </body>
 </html>

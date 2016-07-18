@@ -3,19 +3,26 @@ var drawOutput = new Array(bufferSize);
 
 //custom
 var playing = true;
+var phasorFlag = false;
 
 //maxiLib
 var maxiAudio = new maximJs.maxiAudio();
-var carrierClock = new maximJs.maxiClock();
-var modClock = new maximJs.maxiClock();
-var indexClock = new maximJs.maxiClock();
-var switchClock = new maximJs.maxiClock();
+var clock = new maximJs.maxiClock();
+var pitchFilter = new maximJs.maxiFilter();
+var waveFilter = new maximJs.maxiFilter();
 
 var osc1 = new maximJs.maxiOsc();
 var osc2 = new maximJs.maxiOsc();
 var osc3 = new maximJs.maxiOsc();
 var osc4 = new maximJs.maxiOsc();
 var osc5 = new maximJs.maxiOsc();
+var osc6 = new maximJs.maxiOsc();
+
+var value1Slider, value2Slider, value3Slider, value4Slider;
+value1Slider = document.getElementById("value1Slider"); //cutoff Hz.
+value2Slider = document.getElementById("value2Slider"); //resonance
+value3Slider = document.getElementById("value3Slider"); //phasor freq
+value4Slider = document.getElementById("value4Slider"); //phasor multiplier
 
 initVisual(document.querySelector("#drawCanvas"), document.querySelector("#fftCanvas"), 600, 200, bufferSize);
 
@@ -23,96 +30,60 @@ initVisual(document.querySelector("#drawCanvas"), document.querySelector("#fftCa
 maxiAudio.init();
 console.log("after init:"+bufferSize);
 maxiAudio.setBufferSize(bufferSize);
+console.log("after setBufferSize");
 maxiAudio.outputIsArray(true, 2);
 
 
-//set up some clocks
-carrierClock.setTicksPerBeat(4);
-carrierClock.setTempo(60); //beats per minute
-switchClock.setTicksPerBeat(1);
-switchClock.setTempo(5); //beats per minute
-modClock.setTicksPerBeat(1);
-modClock.setTempo(60); //beats per minute
-indexClock.setTicksPerBeat(1);
-indexClock.setTempo(20); //beats per minute
-
+clock.setTicksPerBeat(4);
+clock.setTempo(120); //beats per minute
 var fft = new maximJs.maxiFFT();
 fft.setup(bufferSize, 512, 256);
 
-//init the st
-var carrier = 79;
-var freqs = [200, 300, 400, 300, 120, 540, 300, 270]; //still using mikes melody from the video - but I like it
-//var saws = [440, 440, 440, 800, 800, 300, 440, 400];
-var saws = [196, 196, 196, 293, 293, 1975, 196, 185]; //some interuptions of the main melody
-var f = freqs[0];
-var mIndexes = [400, 1000, 1500, 600];
-var mods = [78, 81];
-var mod = mods[0];
-var mCounter = 0;
-var iCounter = 0;
-var fCounter = 0;
-var mIndex = mIndexes[0];
-var switchFlag = false;
+var freq = 120;
+var freqs = [200, 300, 400, 300, 120, 540, 300, 270, 180];
+var counter = 0;
+
 maxiAudio.play = function () {
 
-  var output, wave, melody;
+  var wave;
+  clock.ticker();
+  if(clock.tick) {
 
-  //all together
-  carrierClock.ticker();
-  modClock.ticker();
-  indexClock.ticker();
-  switchClock.ticker();
+    freq = freqs[counter%8];
+    counter++;
+  }
 
-  //actually its not the carrier but the melody
-  //for that thick it switches the melody line and waveform
-  //sets a new tempo that the normaly melody is longer than the ugly sound
-  if(carrierClock.tick) {
-    if(!switchFlag) {
-      switchClock.setTempo(5);
-      f = freqs[++fCounter%8];
-    } else {
-      switchClock.setTempo(10);
-      f = saws[++fCounter%8];
-    }
-  }
-  //sets the modulator frequency - one up or down the frequency to have a vibrato
-  if(modClock.tick) {
-    mod = mods[++mCounter%2];
-  }
-  //sets the mosulator index
-  if(indexClock.tick) {
-    mIndex = mIndexes[++iCounter%4];
-  }
-  //tick the switch and switch the tick
-  if(switchClock.tick) {
-    switchFlag = !switchFlag;
-    fCounter = 0;
-  }
   if (playing) {
-    //creates some kind of bass line modulation
-    wave = osc2.sinewave(carrier + osc3.sinewave(mod)*mIndex);
-    melody = osc1.sinewave(f);
-    if(!switchFlag) {
 
+    var res = parseFloat(value2Slider.value);
+    var lf = pitchFilter.lopass(freq, 0.05);
+
+    if(phasorFlag) {
+      var pTime = parseFloat(value3Slider.value);
+      var pMulti = parseFloat(value4Slider.value);
+      wave = waveFilter.lores(osc1.sawn(lf), 100 + osc2.phasor(pTime)*pMulti, res);
     } else {
-      melody += osc4.square(f)*0.2;
-      melody *= 0.5;
-    }
+      var cutoff = parseFloat(value1Slider.value);
 
-    output = (wave + melody)/2;
-    //output = map(output, -2.0, 2.0, -0.5, 0.5);
-    if (fft.process(output)) {
+      wave = waveFilter.lores(osc1.sawn(lf), cutoff, res);
+    }
+    //limit to -1 1 comment if not wanted
+    wave = Math.min(Math.max(wave, -1), 1);
+
+
+    if (fft.process(wave)) {
       fft.magsToDB();
     }
-    setDrawOutput(output);
+    setDrawOutput(wave);
 
   } else {
-    output = 0.0;
+    wave = 0.0;
   }
   //this.output = o;
-  maxiAudio.output[0] = output;
-  maxiAudio.output[1] = output;
+  maxiAudio.output[0] = wave;
+  maxiAudio.output[1] = wave;
 };
+
 
 //helper
 var map = function(n, start1, stop1, start2, stop2) {
@@ -121,8 +92,22 @@ var map = function(n, start1, stop1, start2, stop2) {
 function togglePlay() {
   playing = !playing;
 }
-
-
+function changeValue(id, outId, value) {
+  var inst = document.getElementById(id);
+  inst.stepUp(value);
+  document.getElementById(outId).value = inst.value;
+}
+function togglePhasor(input) {
+  if(input.value === "fix") {
+    phasorFlag = false;
+    document.getElementById("cutoffDiv").style.display = "flex";
+    document.getElementById("phasorDiv").style.display = "none";
+  } else {
+    phasorFlag = true;
+    document.getElementById("cutoffDiv").style.display = "none";
+    document.getElementById("phasorDiv").style.display = "flex";
+  }
+}
 //visual0.3
 var canvas;
 var fftCanvas;
