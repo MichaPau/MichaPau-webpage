@@ -24,7 +24,7 @@ stylesheet: index.css
 			<ul>
 			{% assign posts_list = site.posts | sort: 'date' | reverse %}
 			{% for post in posts_list limit:6 %}
-			<li>{{post.date | date: "%b %-d, %Y"}} - <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
+			<li>{{post.date | date: "%b %d, %Y"}} - <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
 			{% endfor %}
 			</ul>
 		</div>
@@ -33,7 +33,7 @@ stylesheet: index.css
 			<ul>
 			{% assign col_list = site.exhibitions | sort: 'date' | reverse %}
 			{% for item in col_list limit:6 %}
-			<li>{{item.date | date: "%b %-d, %Y"}} - <a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
+			<li>{{item.date | date: "%b %d, %Y"}} - <a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
 			{% endfor %}
 			</ul>
 		</div>

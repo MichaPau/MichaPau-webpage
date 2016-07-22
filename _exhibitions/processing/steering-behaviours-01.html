@@ -1,0 +1,29 @@
+---
+layout: default
+title: Fireflies - steering behaviour example
+category: processing
+date: 2016-07-21
+head-js:
+ - p5.js
+ - p5.dom.js
+ - p5/steering-behaviour-01/sketch.js
+ - p5/steering-behaviour-01/firefly.js
+ - p5/steering-behaviour-01/windForce.js
+stylesheet: centerContent.css
+thumbnail: steering_behaviour_thumb_01.png
+description: P5.js sketch. Steering behaviours. Loosely based on the Firefly algorithm.
+---
+<h1>Steering behaviour - Firefly algorithm</h1>
+<p class="center-text">
+	Assignment 03 from Nature of Code Course on <a href="https://www.kadenze.com/courses/the-nature-of-code/info">Kadenze</a>
+  <br>Loosely based on the <a href="https://en.wikipedia.org/wiki/Firefly_algorithm">Firefly algorithm</a>
+</p>
+<div id="canvasContainer"></div>
+<!-- TODO is center a standard for this type of page and a GUI for certain sketches? move the inline style to the css - inline is always bad -->
+<div id="guiContainer" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+  <div id="radioContainer"></div>
+</div>
+<div>Click drag to make them flee the cursor.</div>
+<p class="center-text">
+	<a href="https://github.com/MichaPau/CodeExamples/tree/master/processing/p5/Steering-behaviours-fireflies-01">Code source on github</a>
+</p>
