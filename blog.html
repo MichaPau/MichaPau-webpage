@@ -10,7 +10,7 @@ stylesheet: blog.css
 	  <header><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></header>
 	  <div class="excerpt-container">
 		{% if post.thumbnail %}
-		  <img class="blog-img" src="{{site.baseurl}}/assets/img/thumbnails/{{post.thumbnail}}">
+		  <img class="blog-img" src="{{site.baseurl}}/assets/img/thumbnails/{{post.thumbnail}}" alt="thumbnail image">
 		{% endif %}
 		  <div class="post-excerpt">
 		  {{ post.excerpt | strip_html }}

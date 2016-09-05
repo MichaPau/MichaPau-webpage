@@ -6,7 +6,7 @@ description: Contact Michael Kittenberger - Webdeveloper
 head-js: contact.js
 ---
 <div id="mail-container">
-<form id="form-container" action="{{site.baseurl}}/assets/php/mail.php" method="POST">
+<form id="form-container" action="{{site.baseurl}}/assets/php/mail.php" method="POST" autocomplete="off">
 	<div class="label-field-pair"><label for="name">Your name:</label><input id="name" name="name" type="text"></div>
 	<div class="label-field-pair"><label for="email">Your Email address:</label><input id="email" name="email" type="email"></div>
 	<div class="label-field-pair"><label for="subject">The subject (*):</label><input id="subject" name="subject" type="text" required></div>

@@ -13,9 +13,9 @@ html {
     /*background: rgb(38, 37, 36); #090909; #003366*/
   background: #000;
 	background-image: linear-gradient(90deg,
-						rgba(38, 37, 36,.15) 50%, transparent 0),
+						rgba(38, 37, 36,.17) 50%, transparent 0),
 					  linear-gradient(
-						rgba(38, 37, 36,.15) 50%, transparent 0);
+						rgba(38, 37, 36,.17) 50%, transparent 0);
 	background-size: 30px 30px;
 }
 html, body {
@@ -84,6 +84,10 @@ footer {
 	padding: 1em;
   margin-left: -1em;
   margin-right: -1em;
+}
+footer a {
+  color: #FFFFFF;
+  font-weight: normal;
 }
 a {
 	text-decoration: none;
@@ -190,6 +194,44 @@ div.submenu > div:hover {
 	display: block;
 	visibility: visible;
 }
+/*mostly post styles*/
+.free-image {
+  display: inline-block;
+  margin: 0.5em;
+  max-width: 100%;
+}
+.fullwidth-image-max-size {
+  width: 100%;
+  max-width: 1000px;
+}
+blockquote {
+
+  border-left: 3px solid rgb(0, 117, 167);
+  margin: 0.5em;
+  padding: 0.5em;
+  quotes: "\201C""\201D""\2018""\2019";
+  background: rgba(0, 0, 0, 0.5);
+}
+blockquote:before {
+  color: rgb(0, 117, 167);
+  content: open-quote;
+  font-size: 1.5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: 0;
+}
+blockquote:after {
+  color: rgb(0, 117, 167);
+  content: close-quote;
+  font-size: 1.5em;
+  line-height: 0.1em;
+  margin-left: 0.25em;
+  vertical-align: 0;
+}
+blockquote p {
+  display: inline;
+}
+
 #disqus_thread {
     margin-top: 2em;
 }

@@ -4,10 +4,10 @@ title: Curriculum
 stylesheet: cv.css
 description: Curriculum vitae - Michael Kittenberger
 ---
-
-<h1>Curriculum vitae</h1>
+{% include curriculum_include.html %}
+<!--<h1>Curriculum vitae</h1>
 <div class="link-pane">
-	<a href="{{site.baseurl}}/curriculum_solo/" target="_blank">Print version</a>
+	<a href="{{site.baseurl}}/curriculum_print/" target="_blank">Print version</a>
 	<a href="{{site.baseurl}}/assets/pdf/Michael_Kittenberger_CV.pdf" target="_blank" style="margin-left: 1em;">PDF version</a>
 </div>
 <section class="section-layout">
@@ -61,7 +61,7 @@ description: Curriculum vitae - Michael Kittenberger
 		<h2>Clients, Employers and people I worked with.</h2>
 		<div class="info-container align-left">
 			<h3>France</h3>
-			Everial (Ouest-France), TWHB Inc., Eurotunnel, France Telecom, Orange Labs, Koloriage,
+			L'autre sommeil, Everial (Ouest-France), TWHB Inc., Eurotunnel, France Telecom, Orange Labs, Koloriage,
 			Qualimedia, Trakteur
 			<h3>Austria</h3>
 			Medwell Internet Services AG, Nofrontiere Design AG, ACE GmbH
@@ -74,7 +74,7 @@ description: Curriculum vitae - Michael Kittenberger
 	</div>
 	<div class="section-content">
 		<div class="side-container shadow border-fire">
-		   <img src="{{site.baseurl}}/assets/img/tree_01.svg" class="svg-image">
+			“All our knowledge has its origins in our perceptions” <br> - Leonardo Da Vinci -
 		</div>
 		<h2>Skills, Tools and techniques I work with.</h2>
 		<div class="info-container align-left">
@@ -83,9 +83,12 @@ description: Curriculum vitae - Michael Kittenberger
 				Web development HTML(5),
 				<span class="tooltip">JavaScript (+frameworks)
 					<span>I really like the smell of Vanilla. <br>That said frameworks and libraries do a great job sometimes. <br>I am in touch with stuff like jquery, angular etc.</span>
-				</span>, CSS, (PostCSS), Node,
-				<span class="tooltip">NPM
+				</span>, CSS3, Node, NPM,
+				<span class="tooltip">Tasks,
 					<span>Personal choice: but I rather Gulp things than Grunt it but both is possible</span>
+				</span>
+				<span class="tooltip"> CMS, CMF
+					<span>Personal choice: processwire, Jekyll for static site generattion. </span>
 				</span><br>
 				Processing<br>
 				Haxe !<br>
@@ -119,7 +122,7 @@ description: Curriculum vitae - Michael Kittenberger
 	</div>
 	<div class="section-content">
 		<div class="side-container shadow border-water">
-			“All our knowledge has its origins in our perceptions” <br> - Leonardo Da Vinci -
+			“Education isn't something you can finish” <br> - Isaac Asimov -
 		</div>
 		<h2>From childhood to Now - till I die</h2>
 		<div class="info-container align-left">
@@ -139,9 +142,10 @@ description: Curriculum vitae - Michael Kittenberger
 				<li>The University of Adelaide - Think. Create. Code - <a href="https://courses.edx.org/certificates/1dfe22f084324534988c3964c45c250a" target="_blank">Certificate</a></li>
 			</ul>
 			<h3>Others</h3>
-			<span class="intent">
-				Professional programmer in C and C++ WIFI Wien (<span class="bold">WI</span>rtschafts<span class="bold">F</span>orschungs<span class="bold">I</span>nstitiut – Institut for economic research Vienna) </span>
-				<br>
+			<ul>
+					<li><a href="http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro">Code School</a> - Shaping up with Angular.js</li>
+					<li>Professional programmer in C and C++ WIFI Wien (<span class="bold">WI</span>rtschafts<span class="bold">F</span>orschungs<span class="bold">I</span>nstitiut – Institut for economic research Vienna) </span></li>
+			</ul>
 		</div>
 	</div>
 </section>
@@ -156,4 +160,4 @@ description: Curriculum vitae - Michael Kittenberger
 			Nature, Music, Juggling, Biking, Languages, Arts and Computer Arts
 		 </div>
 	</div>
-</section>
+</section>-->
