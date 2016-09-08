@@ -1,14 +1,16 @@
 
+h1.title {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 1em 0;
+}
 h2 {
 	margin: 0 0 1em 0;
 	padding: 0;
-	/*font-size: 1em;*/
-	/*text-decoration: underline;*/
 }
 h3 {
 	margin: .5em 0 .5em 0;
 	padding: 0;
-	/*font-size: 1em;*/
 }
 
 ul {
@@ -32,8 +34,9 @@ a {
 .section-layout {
 	display: flex;
 	flex-direction: row;
-	border: 1px dashed #FFF;
+	border: 1px dashed #000;
 	margin-bottom: 1em;
+  background: rgba(255, 255, 255, 0.7);
 	/*min-width: 568px;*/
 }
 .header-wrapper {
@@ -42,8 +45,6 @@ a {
 	min-height: 180px;
 	padding-top: .5em;
 	position: relative;
-	/*filter: drop-shadow(0px 0px 1em rgba(255,255,255,.5));
-	box-shadow: 5px 0 5px 0 rgba(255,255,255,.2);*/
 }
 .section-header {
 	display: inline-block;
@@ -107,7 +108,7 @@ a {
 	display: flex;
 	padding-bottom: .2em;
 	padding-top: .2em;
-	border-bottom: 1px dashed #FFF;
+	border-bottom: 1px dashed #000;
 }
 .info-row:last-child {
 	border: none;
@@ -117,7 +118,7 @@ a {
 	max-width: 50%;
 	text-align: right;
 	padding-right: 1em;
-	border-right: 1px solid #FFF;
+	border-right: 1px solid #000;
 }
 .info-column-right {
 	flex: 1 0 50%;

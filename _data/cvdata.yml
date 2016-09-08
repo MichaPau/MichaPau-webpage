@@ -1,0 +1,104 @@
+version:
+  en: "Version 09/2016"
+  fr: "Version 09/2016"
+
+title:
+  en: "Curriculum vitae"
+  fr: "Curriculum vitae"
+
+section1:
+  title:
+    en: "Informations"
+    fr: "Informations"
+  subtitle:
+    en: "Some superficial data about me."
+    fr: "Quelques données superficielles."
+  info:
+    name-label:
+      en: "Fullname"
+      fr: "Nom"
+    birth-label:
+      en: "Date and place of birth"
+      fr: "Date et lieu de naissance"
+    loc-label:
+      en: "Actual location"
+      fr: "L'adresse actuelle"
+    mail-label:
+      en: "Email"
+      fr: "Email"
+    webpage-label:
+      en: "Web page"
+      fr: "Site internet"
+  side-data:
+    photo-alt:
+      en: "This is a photo of Michael Kittenberger."
+      fr: "Photo de Michael Kittenberger."
+    social-data:
+      github:
+        en: "link to personal github page"
+        fr: "lien vers profil github"
+      viadeo:
+        en: "link to personal viadeo page"
+        fr: "lien vers profil viadeo"
+      stackoverflow:
+        en: "link to personal stackoverflow page"
+        fr: "lien vers profil stackoverflow"
+      github:
+        en: "link to personal linkedin page"
+        fr: "lien vers profil linkedin"
+
+section2:
+  title:
+    en: "Experience"
+    fr: "Expériences"
+  subtitle:
+    en: "Clients, Employers and people I worked with."
+    fr: "Cliénts, Employeurs et personnes auprès j'ai travaillé."
+  sections:
+    first:
+      title:
+        en: "France (since 2006)"
+        fr: "France (depuis 2006)"
+      text:
+        en: "<a href='http://www.michapau.net/2016/08/20/lautre-sommeil-webpage/'>L'autre sommeil</a>, Everial (Ouest-France), TWHB Inc., Eurotunnel, France Telecom, Orange Labs, Koloriage, Qualimedia, Trakteur"
+        fr: "<a href='http://www.michapau.net/2016/08/20/lautre-sommeil-webpage/'>L'autre sommeil</a>, Everial (Ouest-France), TWHB Inc., Eurotunnel, France Telecom, Orange Labs, Koloriage, Qualimedia, Trakteur"
+    second:
+      title:
+        en: "Austria (1999 - 2005)"
+        fr: "Autriche (1999 - 2005)"
+      text:
+        en: "Medwell Internet Services AG, Nofrontiere Design AG, ACE GmbH"
+        fr: "Medwell Internet Services AG, Nofrontiere Design AG, ACE GmbH"
+
+section3:
+  title:
+    en: "Informations"
+    fr: "Informations"
+  subtitle:
+    en: "Some superficial data about me."
+    fr: "Quelques données superficielles."
+  sections:
+    first:
+      type: "text"
+      title:
+        en: "first section"
+        fr: "section premier"
+      text:
+        en: "this is some text for section 1"
+        fr: "c'est le text pour la section 1"
+    second:
+      type: "text"
+      title:
+        en: "second section"
+        fr: "section deuxieme"
+      text:
+        en: "this is some text <br>for section 2"
+        fr: "c'est le text pour la section 2"
+    third:
+      type: "tooltip"
+      text:
+        en: "tooltip text with link <a href='#'>link text</a>"
+        fr: "texte de tooltip"
+      tooltip:
+        en: "text inside the tooltip"
+        fr: "texte interieure"

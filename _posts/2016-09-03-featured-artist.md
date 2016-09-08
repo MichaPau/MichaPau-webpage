@@ -8,7 +8,7 @@ description: Kadenze Blog - Featured Student Work of the Month August
 # Cool, I've been selected for the Featured Student Work of the Month: August on the kandeze blog.
 
 See the [Blog entry](https://blog.kadenze.com/2016/09/02/featured-student-work-month-august/ "link to the kadenze blog")  
-Also published on my [exhibition page]({{ link _exhibitions/processing/genetic-algorithm-01.html }} "intern link to the exhibition")
+Also published on my [exhibition page]({{site.baseurl}}/exhibitions/processing/genetic-algorithm-01.html "intern link to the exhibition")
 
 Kadenze is a platform for Online Arts and Technology courses.
 
