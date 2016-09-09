@@ -1,17 +1,10 @@
 {% assign data = site.data.cvdata %}
 {% assign lang = page.lang %}
 <h1>{{data.title.[lang]}}</h1>
-{% if page.url == '/curriculum/' or  page.url == '/curriculum_fr/'%}
-<div class="link-pane">
-
-	<!--<a href="{{site.baseurl}}/assets/pdf/Michael_Kittenberger_CV.pdf" target="_blank" style="margin-left: 1em;">PDF version</a>-->
-  {% if page.lang == "en" %}
-	<a href="{{site.baseurl}}/curriculum_print/" target="_blank">Print version</a>
-    <a href="{{site.baseurl}}/curriculum_fr/" target="_self" style="margin-left: 1em;">Version français</a>
-  {% elsif page.lang == "fr" %}
-		<a href="{{site.baseurl}}/curriculum_print_fr/" target="_blank">Print version</a>
-    <a href="{{site.baseurl}}/curriculum/" target="_self" style="margin-left: 1em;">English version</a>
-  {% endif %}
+{% if page.url == '/curriculum/'%}<div class="link-pane">
+	<a href="{{site.baseurl}}/curriculum_solo/" target="_blank">Print version</a>
+	<a href="{{site.baseurl}}/assets/pdf/Michael_Kittenberger_CV.pdf" target="_blank" style="margin-left: 1em;">PDF version</a>
+	<!--<a href="{{site.baseurl}}/curriculum_fr/" target="_self" style="margin-left: 1em;">Version français</a>-->
 </div>
 {% endif %}
 <section class="section-layout">
@@ -51,6 +44,7 @@
 				<div class="info-column-right"><a href="http://www.michapau.net" target="_blank">www.michapau.net</a></div>
 			</div>
 		</div>
+
 	</div>
 </section>
 {% assign data = site.data.cvdata.section2 %}

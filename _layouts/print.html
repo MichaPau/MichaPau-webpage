@@ -21,8 +21,6 @@
     <meta name="description" content="{{ page_description }}">
     <title>{{site.title}}{% if page.title %} - {{page.title}}{% endif %}</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <link rel="stylesheet" href="{{site.baseurl}}/css/main_print.css"/>
-    <!--<link rel="stylesheet" href="{{site.baseurl}}/css/navigation.css"/>-->
     <!-- custom styles -->
     {% if page.stylesheet %}
     <link rel="stylesheet" href="{{site.baseurl}}/css/{{ page.stylesheet }}"/>
@@ -47,13 +45,14 @@
     <main>
         {{content}}
     </main>
-    <!-- custom javascript at the end of the body-->
-    {% if page.body-js %}
-    <script src="{{site.baseurl}}/js/{{ page.body-js }}"></script>
-    {% endif %}
-    {% if layout.body-js %}
-    <script src="{{site.baseurl}}/js/{{ layout.body-js }}"></script>
-    {% endif %}
+
   </div>
+  <!-- custom javascript at the end of the body-->
+  {% if page.body-js %}
+  <script src="{{site.baseurl}}/js/{{ page.body-js }}"></script>
+  {% endif %}
+  {% if layout.body-js %}
+  <script src="{{site.baseurl}}/js/{{ layout.body-js }}"></script>
+  {% endif %}
 </body>
 </html>

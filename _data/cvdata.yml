@@ -20,12 +20,18 @@ section1:
     birth-label:
       en: "Date and place of birth"
       fr: "Date et lieu de naissance"
+    birth-value:
+      en: "6. January 1973 in Vienna, Austria"
+      fr: "6. Janvier 1973 à Vienne, Autriche"
     loc-label:
       en: "Actual location"
       fr: "L'adresse actuelle"
     mail-label:
       en: "Email"
       fr: "Email"
+    mail-value:
+      en: "Please refer to the <a href='http:/www.michapau.net/contact/'>contact page</a>"
+      fr: "Contactez moi par la page <a href='http:/www.michapau.net/contact/'>de contact</a> svp."
     webpage-label:
       en: "Web page"
       fr: "Site internet"
@@ -72,33 +78,117 @@ section2:
 
 section3:
   title:
-    en: "Informations"
-    fr: "Informations"
+    en: "Skills"
+    fr: "Compétences"
   subtitle:
-    en: "Some superficial data about me."
-    fr: "Quelques données superficielles."
+    en: "Skills, Tools and techniques I work with."
+    fr: "Skills, Tools and techniques I work with."
   sections:
     first:
-      type: "text"
       title:
-        en: "first section"
-        fr: "section premier"
-      text:
-        en: "this is some text for section 1"
-        fr: "c'est le text pour la section 1"
+        en: "Programming"
+        fr: "Programmation"
+      items:
+        - en: { text: "Web development, HTML5, "}
+          fr: { text: "Devéloppement Web, HTML5, "}
+        - en: { text: "JavaScript (+frameworks), ", tooltip: "I really like the smell of Vanilla. <br>That said frameworks and libraries do a great job sometimes. <br>I am in touch with stuff like jquery, angular etc." }
+          fr: { text: "JavaScript (+frameworks), ", tooltip: "I really like the smell of Vanilla. <br>That said frameworks and libraries do a great job sometimes. <br>I am in touch with stuff like jquery, angular etc." }
+        - en: { text: "CSS3, Node, NPM, "}
+          fr: { text: "CSS3, Node, NPM, "}
+        - en: { text: "Tasks, ", tooltip: "Personal choice: but I rather Gulp things than Grunt it but both is possible"}
+          fr: { text: "Tasks, ", tooltip: "Personal choice: but I rather Gulp things than Grunt it but both is possible"}
+        - en: { text: "<br>CMS, CMF", tooltip: "Personal choice: processwire, Jekyll for static site generation."}
+          fr: { text: "<br>CMS, CMF", tooltip: "Personal choice: processwire, Jekyll for static site generation."}
+        - en: { text: "<br>Processing, P5.js, Haxe"}
+          fr: { text: "<br>Processing, P5.js, Haxe"}
+        - en: { text: "<br>Flex 4.x, ActionScript 3.0, AIR 3.0, Robotlegs 2"}
+          fr: { text: "<br>Flex 4.x, ActionScript 3.0, AIR 3.0, Robotlegs 2"}
+        - en: { text: "<br>Unity3D (Scripting in JavaScript and C#) "}
+          fr: { text: "<br>Unity3D (Scripting en JavaScript et C#) "}
     second:
-      type: "text"
       title:
-        en: "second section"
-        fr: "section deuxieme"
-      text:
-        en: "this is some text <br>for section 2"
-        fr: "c'est le text pour la section 2"
+        en: "Databases"
+        fr: "Base de données"
+      items:
+        - en: { text: "MySQL, Oracle, Sybase, MongoDB"}
+          fr: { text: "MySQL, Oracle, Sybase, MongoDB"}
     third:
-      type: "tooltip"
-      text:
-        en: "tooltip text with link <a href='#'>link text</a>"
-        fr: "texte de tooltip"
-      tooltip:
-        en: "text inside the tooltip"
-        fr: "texte interieure"
+      title:
+        en: "Divers"
+        fr: "Divers"
+      items:
+        - en: { text: "Blender, Google SketchUp, Gimp, (Photoshop)"}
+          fr: { text: "Blender, Google SketchUp, Gimp, (Photoshop)"}
+    forth:
+      title:
+        en: "<a href='https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels' target='_blank'>Languages</a>"
+        fr: "<a href='https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels' target='_blank'>Langues</a>"
+      items:
+        - en: { text: "German (Native), French (Level C2), English (Level C1), Spanish (Level A1), Breton (Level A1)", link: "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels"}
+          fr: { text: "Allemand (Native), Français (Niveau C2 (C1 écrire)), Anglais (Niveau C1), Spanish (Niveau A1), Breton (Niveau A1)", link: "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels"}
+    fifth:
+      title:
+        en: "Licences"
+        fr: "Permis"
+      items:
+        - en: { text: "Driver Licence B "}
+          fr: { text: "Permis de conduire "}
+section4:
+  title:
+    en: "Education"
+    fr: "Education et formation"
+  subtitle:
+    en: "From childhood to Now - till I die"
+    fr: "From childhood to Now - till I die"
+  sections:
+    first:
+      title:
+        en: "Mook courses (in progress)"
+        fr: "Courses en ligne MOOK (en progres)"
+      items:
+        - en: { text: "Discovery Precalculus: A Creative and Connected Approach"}
+          fr: { text: "Discovery Precalculus: A Creative and Connected Approach"}
+        - en: { text: "Introduction to MongoDB using the MEAN stack"}
+          fr: { text: "Introduction to MongoDB using the MEAN stack"}
+        - en: { text: "Goldsmiths University of London - Creative Programming for Audiovisual Art"}
+          fr: { text: "Goldsmiths University of London - Creative Programming for Audiovisual Art"}
+        - en: { text: "Goldsmiths University of London - Machine Learning for Musicians and Artists"}
+          fr: { text: "Goldsmiths University of London - Machine Learning for Musicians and Artists"}
+    second:
+      title:
+        en: "Mook courses (finished)"
+        fr: "Courses en ligne MOOK (terminés)"
+      items:
+        - en: { text: "Processing Fondation - The nature of code - <a href='https://www.kadenze.com/certificates/O2OFZPIZ' target='_blank'>Certificate</a>", link: "https://www.kadenze.com/certificates/O2OFZPIZ"}
+          fr: { text: "Processing Fondation - The nature of code - <a href='https://www.kadenze.com/certificates/O2OFZPIZ' target='_blank'>Certificate</a>", link: "https://www.kadenze.com/certificates/O2OFZPIZ"}
+        - en: { text: "University Carlos III de Madrid - The Software Architect: Building the Digital World - <a href='https://courses.edx.org/certificates/c933dd8263a645a990a51ac29053023e' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/c933dd8263a645a990a51ac29053023e"}
+          fr: { text: "University Carlos III de Madrid - The Software Architect: Building the Digital World - <a href='https://courses.edx.org/certificates/c933dd8263a645a990a51ac29053023e' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/c933dd8263a645a990a51ac29053023e"}
+        - en: { text: "University Côte d’Azur - HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps - <a href='https://courses.edx.org/certificates/22dacbd2080445e6b8d7c6ad9def74f6' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/22dacbd2080445e6b8d7c6ad9def74f6"}
+          fr: { text: "University Côte d’Azur - HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps - <a href='https://courses.edx.org/certificates/22dacbd2080445e6b8d7c6ad9def74f6' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/22dacbd2080445e6b8d7c6ad9def74f6"}
+        - en: { text: "University Côte d’Azur - HTML5 Part 1: HTML5 Coding Essentials and Best Practices - <a href='https://courses.edx.org/certificates/c037d454a69c40fd84bb6444e3524fa0' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/c037d454a69c40fd84bb6444e3524fa0"}
+          fr: { text: "University Côte d’Azur - HTML5 Part 1: HTML5 Coding Essentials and Best Practices - <a href='https://courses.edx.org/certificates/c037d454a69c40fd84bb6444e3524fa0' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/c037d454a69c40fd84bb6444e3524fa0"}
+        - en: { text: "The University of Adelaide - Think. Create. Code - <a href='https://courses.edx.org/certificates/1dfe22f084324534988c3964c45c250a' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/1dfe22f084324534988c3964c45c250a"}
+          fr: { text: "The University of Adelaide - Think. Create. Code - <a href='https://courses.edx.org/certificates/1dfe22f084324534988c3964c45c250a' target='_blank'>Certificate</a>", link: "https://courses.edx.org/certificates/1dfe22f084324534988c3964c45c250a"}
+    third:
+      title:
+        en: "Others"
+        fr: "Sinon"
+      items:
+        - en: { text: "<a href='http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro' target='_blank'>Code School</a> - Shaping up with Angular.js", link: "http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro"}
+          fr: { text: "<a href='http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro' target='_blank'>Code School</a> - Shaping up with Angular.js", link: "http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro"}
+        - en: { text: "Professional programmer in C and C++ WIFI Wien (<span class='bold'>WI</span>rtschafts<span class='bold'>F</span>orschungs<span class='bold'>I</span>nstitiut – Institut for economic research Vienna) </span>"}
+          fr: { text: "Programmeur professionnel C et C++ WIFI Wien (<span class='bold'>WI</span>rtschafts<span class='bold'>F</span>orschungs<span class='bold'>I</span>nstitiut – Institut de recherche économique à Vienne) </span>"}
+section5:
+  title:
+    en: "Interests"
+    fr: "Intérêts"
+  subtitle:
+    en: "The world is a beautiful place"
+    fr: "The world is a beautiful place"
+  text:
+    en: Nature, Music, Juggling, Biking, Languages, Arts and Computer Arts
+    fr: Nature, Musique, Jonglage, Vélo, Langues, Arts et Art numeriques
+section6:
+  title:
+    en: "Footnotes"
+    fr: "Notes en bas de page"
