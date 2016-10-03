@@ -4,7 +4,8 @@
 @font-face {
     font-family: spartanFont;
 		src: url('../assets/fonts/ClearSans-Regular.ttf');
-    /*src: url('../assets/fonts/verdana.ttf');*/
+    /*src: url('../assets/fonts/leaguespartan-bold.ttf');*/
+    /*src: url('../assets/fonts/fanwood-webfont.ttf');*/
 }
 * {
 	box-sizing: border-box;

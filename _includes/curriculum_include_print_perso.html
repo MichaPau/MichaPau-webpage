@@ -12,14 +12,14 @@
   		<div class="side-container">
   			<img src="{{site.baseurl}}/assets/img/photo_me_02.png" alt="{{data.section1.side-data.photo-alt.[lang]}}" width="150">
   			<div class="social-container">
-  				<a href="https://github.com/MichaPau" target="_blank"><img src="{{site.baseurl}}/assets/img/github_24.png" alt="{{data.section1.side-data.social-data.github.[lang]}}"></a><span class="footnote" data-order="2" data-url="https://github.com/MichaPau">(2)</span>
-  				<a href="http://fr.viadeo.com/fr/profile/michael.kittenberger" target="_blank"><img src="{{site.baseurl}}/assets/img/viadeo_24.png" alt="{{data.section1.side-data.social-data.viadeo.[lang]}}"></a><span class="footnote" data-order="3" data-url="http://fr.viadeo.com/fr/profile/michael.kittenberger">(3)</span>
-  				<a href="http://stackoverflow.com/users/1456318/michapau?tab=profile" target="_blank"><img src="{{site.baseurl}}/assets/img/stackoverflow_24.png" alt="{{data.section1.side-data.social-data.stackoverflow.[lang]}}"></a><span class="footnote" data-order="4" data-url="http://stackoverflow.com/users/1456318/michapau?tab=profile">(4)</span>
-  				<a href="https://fr.linkedin.com/in/michael-kittenberger-70a3961a" target="_blank"><img src="{{site.baseurl}}/assets/img/linkedin_24.png" alt="{{data.section1.side-data.social-data.linkedin.[lang]}}"></a><span class="footnote" data-order="5" data-url="https://fr.linkedin.com/in/michael-kittenberger-70a3961a">(5)</span>
+  				<a href="https://github.com/MichaPau" target="_blank"><img src="{{site.baseurl}}/assets/img/github_24.png" alt="{{data.section1.side-data.social-data.github.[lang]}}"></a><span class="footnote" data-order="2" data-url="https://github.com/MichaPau">(1)</span>
+  				<a href="http://fr.viadeo.com/fr/profile/michael.kittenberger" target="_blank"><img src="{{site.baseurl}}/assets/img/viadeo_24.png" alt="{{data.section1.side-data.social-data.viadeo.[lang]}}"></a><span class="footnote" data-order="3" data-url="http://fr.viadeo.com/fr/profile/michael.kittenberger">(2)</span>
+  				<a href="http://stackoverflow.com/users/1456318/michapau?tab=profile" target="_blank"><img src="{{site.baseurl}}/assets/img/stackoverflow_24.png" alt="{{data.section1.side-data.social-data.stackoverflow.[lang]}}"></a><span class="footnote" data-order="4" data-url="http://stackoverflow.com/users/1456318/michapau?tab=profile">(3)</span>
+  				<a href="https://fr.linkedin.com/in/michael-kittenberger-70a3961a" target="_blank"><img src="{{site.baseurl}}/assets/img/linkedin_24.png" alt="{{data.section1.side-data.social-data.linkedin.[lang]}}"></a><span class="footnote" data-order="5" data-url="https://fr.linkedin.com/in/michael-kittenberger-70a3961a">(4)</span>
   			</div>
   		</div>
   		<h2>{{data.section1.subtitle.[lang]}}</h2>
-  		<div class="info-container top-padding-spacer">
+  		<div class="info-container">
   			<div class="info-row">
   				<div class="info-column-left">{{data.section1.info.name-label.[lang]}}</div>
   				<div class="info-column-right">Michael Kittenberger</div>
@@ -34,17 +34,21 @@
   			</div>
   			<div class="info-row">
   				<div class="info-column-left">{{data.section1.info.mail-label.[lang]}}</div>
-  				<div class="info-column-right">{{data.section1.info.mail-value.[lang]}}<span class="footnote" data-order="1" data-url="http://www.michapau.net/contact/">(1)</span></div>
+  				<div class="info-column-right">michael_kittenberger@yahoo.fr</div>
   			</div>
-  			 <div class="info-row">
-  				<div class="info-column-left">{{data.section1.info.webpage-label.[lang]}}</div>
-  				<div class="info-column-right"><a href="http://www.michapau.net" target="_blank">www.michapau.net</a></div>
+        <div class="info-row">
+  				<div class="info-column-left">Téléphone:</div>
+  				<div class="info-column-right">+33 (0)6 09 58 96 24</div>
   			</div>
+			 <div class="info-row">
+				<div class="info-column-left">{{data.section1.info.webpage-label.[lang]}}</div>
+				<div class="info-column-right"><a href="http://www.michapau.net" target="_blank">www.michapau.net</a></div>
+			</div>
   		</div>
   	</div>
   </section>
 {% assign data = site.data.cvdata.section2 %}
-{% assign footnote_count = 5 %}
+{% assign footnote_count = 4 %}
   <section class="section-layout">
   	<div class="header-wrapper color-air">
   		<h1 class="section-header">{{data.title.[lang]}}</h1>
@@ -126,11 +130,7 @@
   	<div class="section-content">
   		<h2>{{data.subtitle.[lang]}}</h2>
   		 <div class="info-container align-left">
-         <ul>
-         {% for subitem in data.items %}
-         <li>{{subitem[lang]}}</li>
-         {% endfor%}
-         </ul>
+  			{{data.text.[lang]}}
   		 </div>
   	</div>
   </section>

@@ -1,18 +1,24 @@
 version:
-  en: "Version 09/2016"
-  fr: "Version 09/2016"
+  en: "Version 10/2016"
+  fr: "Version 10/2016"
 
 title:
   en: "Curriculum vitae"
-  fr: "Curriculum vitae"
+  fr: "CV - Développeur Fullstack"
 
 section1:
   title:
     en: "Informations"
     fr: "Informations"
   subtitle:
+    en: " "
+    fr: " "
+  subtitleBAK:
     en: "Some superficial data about me."
     fr: "Quelques données superficielles."
+  description:
+    en: "Full stack developer"
+    fr: "Développeur 'full stack'"
   info:
     name-label:
       en: "Fullname"
@@ -26,15 +32,24 @@ section1:
     loc-label:
       en: "Actual location"
       fr: "L'adresse actuelle"
+    loc-value:
+      en: "Rennes - Brittany, France"
+      fr: "Rennes - Bretagne, France"
     mail-label:
       en: "Email"
       fr: "Email"
     mail-value:
-      en: "Please refer to the <a href='http:/www.michapau.net/contact/'>contact page</a>"
-      fr: "Contactez moi par la page <a href='http:/www.michapau.net/contact/'>de contact</a> svp."
+      en: "Please refer to the <a href='http://www.michapau.net/contact/'>contact page</a>"
+      fr: "<a href='http://www.michapau.net/contact/'>Le formulaire de contact</a>."
     webpage-label:
       en: "Web page"
       fr: "Site internet"
+    description:
+      en: "Full stack developer"
+      fr: "Développeur 'full stack'"
+    description-label:
+      en: ""
+      fr: "Poste recherché"
   side-data:
     photo-alt:
       en: "This is a photo of Michael Kittenberger."
@@ -59,7 +74,7 @@ section2:
     fr: "Expériences"
   subtitle:
     en: "Clients, Employers and people I worked with."
-    fr: "Cliénts, Employeurs et personnes auprès j'ai travaillé."
+    fr: "Clients, Employeurs et personnes auprès desquelles j'ai travaillé."
   sections:
     first:
       title:
@@ -82,7 +97,7 @@ section3:
     fr: "Compétences"
   subtitle:
     en: "Skills, Tools and techniques I work with."
-    fr: "Skills, Tools and techniques I work with."
+    fr: "Savoir-Faire, Outils et techniques maîtrisées."
   sections:
     first:
       title:
@@ -90,17 +105,19 @@ section3:
         fr: "Programmation"
       items:
         - en: { text: "Web development, HTML5, "}
-          fr: { text: "Devéloppement Web, HTML5, "}
-        - en: { text: "JavaScript (+frameworks), ", tooltip: "I really like the smell of Vanilla. <br>That said frameworks and libraries do a great job sometimes. <br>I am in touch with stuff like jquery, angular etc." }
-          fr: { text: "JavaScript (+frameworks), ", tooltip: "I really like the smell of Vanilla. <br>That said frameworks and libraries do a great job sometimes. <br>I am in touch with stuff like jquery, angular etc." }
-        - en: { text: "CSS3, Node, NPM, "}
-          fr: { text: "CSS3, Node, NPM, "}
-        - en: { text: "Tasks, ", tooltip: "Personal choice: but I rather Gulp things than Grunt it but both is possible"}
-          fr: { text: "Tasks, ", tooltip: "Personal choice: but I rather Gulp things than Grunt it but both is possible"}
-        - en: { text: "<br>CMS, CMF", tooltip: "Personal choice: processwire, Jekyll for static site generation."}
-          fr: { text: "<br>CMS, CMF", tooltip: "Personal choice: processwire, Jekyll for static site generation."}
-        - en: { text: "<br>Processing, P5.js, Haxe"}
-          fr: { text: "<br>Processing, P5.js, Haxe"}
+          fr: { text: "Développement Web, HTML5, "}
+        - en: { text: "JavaScript (+frameworks)", tooltip: "I really like the smell of Vanilla. <br>That said frameworks and libraries do a great job sometimes. <br>I am in touch with stuff like jquery, angular etc." }
+          fr: { text: "JavaScript (+frameworks)", tooltip: "I really like the smell of Vanilla. <br>Ceci dit les 'frameworks' et les bibliothèques font du bon travail. <br>Je m'en sers si besoin est." }
+        - en: { text: ", CSS3, Node, NPM, "}
+          fr: { text: ", CSS3, Node, NPM, "}
+        - en: { text: "Tasks", tooltip: "Personal choice: but I rather Gulp things than Grunt it but both are possible."}
+          fr: { text: "Tasks", tooltip: "Je 'gulp' plutôt que 'grunt' les tâches - mais les deux options sont possibles."}
+        - en: { text: "<br>"}
+        - fr: { text: "<br>"}
+        - en: { text: "CMS, CMF", tooltip: "Personal choice: ProcessWire, Jekyll for static site generation."}
+          fr: { text: "CMS, CMF", tooltip: "CMS de préférence: ProcessWire, générateur de sites statiques:  Jekyll."}
+        - en: { text: "<br>Processing, P5.js, Haxe, ChucK"}
+          fr: { text: "<br>Processing, P5.js, Haxe, ChucK"}
         - en: { text: "<br>Flex 4.x, ActionScript 3.0, AIR 3.0, Robotlegs 2"}
           fr: { text: "<br>Flex 4.x, ActionScript 3.0, AIR 3.0, Robotlegs 2"}
         - en: { text: "<br>Unity3D (Scripting in JavaScript and C#) "}
@@ -115,17 +132,17 @@ section3:
     third:
       title:
         en: "Divers"
-        fr: "Divers"
+        fr: "Autres"
       items:
         - en: { text: "Blender, Google SketchUp, Gimp, (Photoshop)"}
           fr: { text: "Blender, Google SketchUp, Gimp, (Photoshop)"}
     forth:
       title:
-        en: "<a href='https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels' target='_blank'>Languages</a>"
-        fr: "<a href='https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels' target='_blank'>Langues</a>"
+        en: "<a href='https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages' target='_blank'>Languages</a>"
+        fr: "<a href='https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages' target='_blank'>Langues</a>"
       items:
-        - en: { text: "German (Native), French (Level C2), English (Level C1), Spanish (Level A1), Breton (Level A1)", link: "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels"}
-          fr: { text: "Allemand (Native), Français (Niveau C2 (C1 écrire)), Anglais (Niveau C1), Spanish (Niveau A1), Breton (Niveau A1)", link: "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages#Common_reference_levels"}
+        - en: { text: "German (Native), French (Level C2), English (Level C1), Spanish (Level A1), Breton (Level A1)", link: "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages"}
+          fr: { text: "Allemand (Native), Français (Niveau C2 (C1 écrit)), Anglais (Niveau C1), Spanish (Niveau A1), Breton (Niveau A1)", link: "https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages"}
     fifth:
       title:
         en: "Licences"
@@ -139,12 +156,15 @@ section4:
     fr: "Education et formation"
   subtitle:
     en: "From childhood to Now - till I die"
-    fr: "From childhood to Now - till I die"
+    fr: "De l'enfance à maintenant - jusqu'à ce que je meurs"
+  subtitle-print:
+    en: "Education isn't something you can finish"
+    fr: "L'éducation n'est pas quelque chose qu'on puisse finir"
   sections:
     first:
       title:
-        en: "Mook courses (in progress)"
-        fr: "Courses en ligne MOOK (en progres)"
+        en: "Mooc courses (in progress)"
+        fr: "Cours en ligne MOOC"
       items:
         - en: { text: "Discovery Precalculus: A Creative and Connected Approach"}
           fr: { text: "Discovery Precalculus: A Creative and Connected Approach"}
@@ -154,10 +174,12 @@ section4:
           fr: { text: "Goldsmiths University of London - Creative Programming for Audiovisual Art"}
         - en: { text: "Goldsmiths University of London - Machine Learning for Musicians and Artists"}
           fr: { text: "Goldsmiths University of London - Machine Learning for Musicians and Artists"}
+        - en: { text: "Stanford University - Physics-Based Sound Synthesis"}
+          fr: { text: "Stanford University - Physics-Based Sound Synthesis"}
     second:
       title:
-        en: "Mook courses (finished)"
-        fr: "Courses en ligne MOOK (terminés)"
+        en: "Mooc courses (finished)"
+        fr: "Cours en ligne MOOC (terminés)"
       items:
         - en: { text: "Processing Fondation - The nature of code - <a href='https://www.kadenze.com/certificates/O2OFZPIZ' target='_blank'>Certificate</a>", link: "https://www.kadenze.com/certificates/O2OFZPIZ"}
           fr: { text: "Processing Fondation - The nature of code - <a href='https://www.kadenze.com/certificates/O2OFZPIZ' target='_blank'>Certificate</a>", link: "https://www.kadenze.com/certificates/O2OFZPIZ"}
@@ -172,7 +194,7 @@ section4:
     third:
       title:
         en: "Others"
-        fr: "Sinon"
+        fr: "Autres"
       items:
         - en: { text: "<a href='http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro' target='_blank'>Code School</a> - Shaping up with Angular.js", link: "http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro"}
           fr: { text: "<a href='http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro' target='_blank'>Code School</a> - Shaping up with Angular.js", link: "http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro"}
@@ -180,14 +202,27 @@ section4:
           fr: { text: "Programmeur professionnel C et C++ WIFI Wien (<span class='bold'>WI</span>rtschafts<span class='bold'>F</span>orschungs<span class='bold'>I</span>nstitiut – Institut de recherche économique à Vienne) </span>"}
 section5:
   title:
-    en: "Interests"
+    en: "Interests "
     fr: "Intérêts"
   subtitle:
-    en: "The world is a beautiful place"
-    fr: "The world is a beautiful place"
-  text:
+    en: "Social and artistic skills"
+    fr: "Compétences sociales et artistiques"
+  items:
+    - en: Computer and programming training for children.
+      fr: Cours d'informatique pour enfants.
+    - en: Digital arts - Machine Learning, Sound synthesis.
+      fr: Arts numeriques - Machine Learning, Sound synthesis.
+    - en: Animation workshops for children (Games, climbing, circus)
+      fr: Animation d'atelier pour enfants (jeux, escalade, cirque)
+    - en: Taking part in theater workshops
+      fr: Participation à des cours de théatre
+    - en: Plays the guitar and accordion a little
+      fr: Joue en peu de guitar et d'accordéon
+    - en: Juggling - Member of a organisation for juggling conventions
+      fr: Jonglage - Participation à l'organisation de conventions sur l'art du cirque
+  textBAK:
     en: Nature, Music, Juggling, Biking, Languages, Arts and Computer Arts
-    fr: Nature, Musique, Jonglage, Vélo, Langues, Arts et Art numeriques
+    fr: Nature, Musique, Jonglage, Vélo, Langues, Arts et Arts numeriques,
 section6:
   title:
     en: "Footnotes"

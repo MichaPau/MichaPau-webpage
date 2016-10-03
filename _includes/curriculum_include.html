@@ -3,8 +3,6 @@
 <h1>{{data.title.[lang]}}</h1>
 {% if page.url == '/curriculum/' or  page.url == '/curriculum_fr/'%}
 <div class="link-pane">
-
-	<!--<a href="{{site.baseurl}}/assets/pdf/Michael_Kittenberger_CV.pdf" target="_blank" style="margin-left: 1em;">PDF version</a>-->
   {% if page.lang == "en" %}
 	<a href="{{site.baseurl}}/curriculum_print/" target="_blank">Print version</a>
     <a href="{{site.baseurl}}/curriculum_fr/" target="_self" style="margin-left: 1em;">Version français</a>
@@ -20,7 +18,7 @@
 	</div>
 	<div class="section-content">
 		<div class="side-container shadow border-space">
-			<img src="{{site.baseurl}}/assets/img/photo_me_01.png" alt="{{data.section1.side-data.photo-alt.[lang]}}" width="150">
+			<img src="{{site.baseurl}}/assets/img/photo_me_02.png" alt="{{data.section1.side-data.photo-alt.[lang]}}" width="150" id="avatar" onclick="changeAvatar();">
 			<div class="social-container">
 				<a href="https://github.com/MichaPau" target="_blank"><img src="{{site.baseurl}}/assets/img/github_24.png" alt="{{data.section1.side-data.social-data.github.[lang]}}"></a>
 				<a href="http://fr.viadeo.com/fr/profile/michael.kittenberger" target="_blank"><img src="{{site.baseurl}}/assets/img/viadeo_24.png" alt="{{data.section1.side-data.social-data.viadeo.[lang]}}"></a>
@@ -29,7 +27,7 @@
 			</div>
 		</div>
 		<h2>{{data.section1.subtitle.[lang]}}</h2>
-		<div class="info-container">
+		<div class="info-container top-padding-spacer">
 			<div class="info-row">
 				<div class="info-column-left">{{data.section1.info.name-label.[lang]}}</div>
 				<div class="info-column-right">Michael Kittenberger</div>
@@ -40,7 +38,7 @@
 			</div>
 			<div class="info-row">
 				<div class="info-column-left">{{data.section1.info.loc-label.[lang]}}</div>
-				<div class="info-column-right">Rennes, Brittany</div>
+				<div class="info-column-right">{{data.section1.info.loc-value.[lang]}}</div>
 			</div>
 			<div class="info-row">
 				<div class="info-column-left">{{data.section1.info.mail-label.[lang]}}</div>
@@ -83,21 +81,15 @@
 		</div>
 		<h2>{{data.subtitle.[lang]}}</h2>
 		<div class="info-container align-left">
-			{% for item in data.sections %}
+      {% for item in data.sections %}
       <h3>{{item[1].title.[lang]}}</h3>
-			<!--{{item[1]}}-->
-				<span class="intent">
-				{% for subitem in item[1].items %}
-					{% if subitem.[lang].tooltip %}
-						<span class="tooltip">{{subitem.[lang].text}}
-							<span>{{subitem.[lang].tooltip}}</span>
-						</span>
-					{% else %}
-						{{subitem.[lang].text}}
-					{% endif %}
-				{% endfor%}
-				</span>
-			{% endfor %}
+      <span class="intent">
+        {% for subitem in item[1].items %}
+          {% if subitem.[lang].tooltip %}<span class="tooltip">{{subitem.[lang].text}}<span>{{subitem.[lang].tooltip}}</span></span>
+          {% else %}{{subitem.[lang].text}}{% endif %}
+        {% endfor%}
+      </span>
+      {% endfor %}
 		</div>
 	</div>
 </section>
@@ -132,10 +124,20 @@
 		<div class="side-container shadow border-earth"></div>
 		<h2>{{data.subtitle.[lang]}}</h2>
 		 <div class="info-container align-left">
-			{{data.text.[lang]}}
+      <ul>
+      {% for subitem in data.items %}
+      <li>{{subitem[lang]}}</li>
+      {% endfor%}
+      </ul>
 		 </div>
 	</div>
 </section>
 <script>
-	console.log(document.body.innerText);
+  var avatar = document.getElementById("avatar");
+  var avaIndex = 0;
+  var avaImages = ["{{site.baseurl}}/assets/img/photo_me_02.png", "{{site.baseurl}}/assets/img/photo_me_coding.png", "{{site.baseurl}}/assets/img/photo_me_posing.png", "{{site.baseurl}}/assets/img/photo_me_debugging.png"];
+  function changeAvatar() {
+    avaIndex = (++avaIndex) >= avaImages.length ? 0 : avaIndex;
+    avatar.src = avaImages[avaIndex];
+  }
 </script>

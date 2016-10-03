@@ -24,8 +24,16 @@
 			</div>
 		</div>
 		<div class="menu-container" role="presentation">
+			<div class="menu-item {% if page.url == '/portfolio/'%}active{% endif %}" role="presentation">
+				<a href="{{site.baseurl}}/portfolio/" role="menuitem">Portfolio</a>
+			</div>
 			<div class="menu-item {% if page.url == '/curriculum/'%}active{% endif %}" role="presentation">
 				<a href="{{site.baseurl}}/curriculum/" role="menuitem">Curriculum</a>
+				<!--<div class="submenu" role="menu">
+					<div {% if page.url == '/portfolio/'%}class="active"{% endif %} role="presentation">
+						<a href="{{site.baseurl}}/portfolio/" role="menuitem">Portfolio</a>
+					</div>
+				</div>-->
 			</div>
 			<div class="menu-item {% if page.url == '/links_n_info/'%}active{% endif %}" role="presentation">
 				<a href="{{site.baseurl}}/links_n_info/" role="menuitem">Links&Info</a>

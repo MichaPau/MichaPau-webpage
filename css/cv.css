@@ -1,6 +1,6 @@
 
 h2 {
-	margin: 0 0 1em 0;
+	margin: 0 0 0.5em 0;
 	padding: 0;
 	/*font-size: 1em;*/
 	/*text-decoration: underline;*/
@@ -19,8 +19,12 @@ ul {
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 2em;
+	max-width: 100%;
 }
+li {
+ max-width: 100%;
 
+}
 a {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -34,6 +38,7 @@ a {
 	flex-direction: row;
 	border: 1px dashed #FFF;
 	margin-bottom: 1em;
+
 	/*min-width: 568px;*/
 }
 .header-wrapper {
@@ -96,7 +101,7 @@ a {
 	display: flex;
 	/*flex: 0 1 67%;*/
 	max-width: 67%;
-
+	height: 100%;
 	flex-direction: column;
 	text-align: center;
 }
@@ -146,6 +151,9 @@ a {
 }
 .intent {
 	padding-left: 2em;
+}
+.top-padding-spacer {
+	padding-top: 1em;
 }
 .color-space {
 	background-color: #003150;

@@ -59,6 +59,7 @@ h2 {
   font-size: 1.2em;
 	margin: 0 0 0.5em 0;
 	padding: 0;
+
 }
 
 h3 {
@@ -75,14 +76,20 @@ ul {
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 2em;
+  /*max-width: 100%;*/
 }
+/*li {
+  max-width: 100%;
+  word-wrap: break-word;
+}*/
 #footnotes-list {
   margin-top: 0;
 }
 a {
 	text-decoration: none;
-	font-weight: bold;
-  color: rgba(0, 117, 167, 1);
+	/*font-weight: bold;
+  color: rgba(0, 117, 167, 1);*/
+  color: #000000;
 }
 .version-info {
   width: 100%;
@@ -172,7 +179,6 @@ a {
 	display: flex;
 	/*flex: 0 1 67%;*/
 	max-width: 100%;
-
 	flex-direction: column;
 	text-align: center;
 }
@@ -222,6 +228,9 @@ a {
 }
 .intent {
 	padding-left: 2em;
+}
+.top-padding-spacer {
+	padding-top: 1em;
 }
 .color-space {
 	background-color: #003150;
@@ -273,7 +282,8 @@ a {
 	color: #FFFFFF;
 }
 .tooltip {
-	color: rgba(220, 158, 1, 1);
+	/*color: rgba(220, 158, 1, 1);*/
+  color: #000000;
 }
 /*Tooltip*/
 /*.tooltip span.tooltip-text {
