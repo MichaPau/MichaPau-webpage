@@ -27,12 +27,18 @@
     <link rel="stylesheet" href="{{site.baseurl}}/css/main.css"/>
     <!--<link rel="stylesheet" href="{{site.baseurl}}/css/navigation.css"/>-->
     <!-- custom styles -->
-    {% if page.stylesheet %}
+    {% for item in page.stylesheet %}
+          <link rel="stylesheet" href="{{site.baseurl}}/css/{{item}}"/>
+    {% endfor %}
+    {% for item in layout.stylesheet %}
+          <link rel="stylesheet" href="{{site.baseurl}}/css/{{item}}"/>
+    {% endfor %}
+    <!--{% if page.stylesheet %}
     <link rel="stylesheet" href="{{site.baseurl}}/css/{{ page.stylesheet }}"/>
     {% endif %}
     {% if layout.stylesheet %}
     <link rel="stylesheet" href="{{site.baseurl}}/css/{{ layout.stylesheet }}"/>
-    {% endif %}
+    {% endif %}-->
     <!-- custom javascript in the header-->
     {% for item in page.head-js %}
         <script src="{{site.baseurl}}/js/{{ item }}"></script>
