@@ -99,7 +99,9 @@ a {
   /*color: rgb(236, 221, 56);*/
   /*color: rgba(0, 117, 167, 1);*/
 }
-
+ a.back-link {
+   align-self: flex-start;
+ }
 h1 {
     margin: 0;
     font-size: 1.5em;
@@ -111,6 +113,9 @@ h2 {
 h3 {
     margin: 0;
     font-size: 1em;
+}
+.h-info {
+  font-size: 0.8em;
 }
 .important {
     color: #ff3300;

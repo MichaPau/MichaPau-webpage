@@ -17,7 +17,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="Content-Language" content="en,fr">
 
-    {% if page.fb-img %}<meta property="og:image" content="{{site.url}}/{{page.fb-img}}"/>{% endif %}
+    {% if page.og-title %}<meta property="og:title" content="{{site.url}}/{{page.og-title}}"/>{% endif %}
+    {% if page.og-description %}<meta property="og:description" content="{{site.url}}/{{page.og-description}}"/>{% endif %}
+    {% if page.og-img %}<meta property="og:image" content="{{site.url}}/{{page.og-img}}"/>{% endif %}
+
     <meta name="description" content="{{ page_description }}">
     <title>{{site.title}}{% if page.title %} - {{page.title}}{% endif %}</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">

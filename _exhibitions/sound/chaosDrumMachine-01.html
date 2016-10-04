@@ -1,0 +1,163 @@
+---
+layout: default
+title: Chaos drum machine
+category: sound
+head-js:
+ - p5.js
+ - p5.dom.js
+ - sound/maxiLib.js
+ - sound/examples/chaos_drum_machine_01/pattern.js
+ - sound/examples/chaos_drum_machine_01/Instrument.js
+body-js:
+date: 2016-09-15
+stylesheet: centerContentSound.css
+thumbnail: chaosDrum_thumb_01.png
+description: Seventh assignment for the Kadenze Creative Programming for AudioVisual Art course. Creating a prototype class to handle synthesis.
+og-img: assets/img/thumbnails/chaosDrum_thumb_01.png
+---
+<h1>Using a prototype class</h1>
+<p>
+  Seventh assignment for the
+  <a href="https://www.kadenze.com/courses/creative-programming-for-audiovisual-art/info">Kadenze Creative Programming for AudioVisual Art</a> Mook course.
+  <br>
+  The instruction was to create a prototype class that handles all graphical synthesis,
+  and use this class to make objects that generate multiple simultaneous variations.
+  So this was more about programming techniques.
+</p>
+<div id="canvas-container" style="display: flex; flex-direction: column; justify-content:center;"></div>
+<script>
+  var pattern;
+  var aStep = 0;
+  //GUI Elements
+  var drawType;
+  var outInfo;
+  var globalout = 0;
+
+  var maxiAudio = new maximJs.maxiAudio();
+  maxiAudio.init();
+  maxiAudio.setBufferSize(2048);
+  maxiAudio.outputIsArray(true, 2);
+
+  //for the root element only
+  var rootFrequencies = [200, 200, 310, 120];
+  var rootF = 0;
+
+  //maxiAudio play function
+  maxiAudio.play = function () {
+    if(pattern) {
+      var playingItems = 1;
+      globalout = 0;
+      //go through all created items
+      for(var i = 0; i < pattern.items.length; i++) {
+        var item = pattern.items[i];
+        //if the item is a parent aka has child elements -> play them
+        if(item.childs.length === 4) {
+          var itemOut = 0;
+          //every item holds his clock
+          item.clock.ticker();
+          if(item.clock.tick) {
+            //this is for the root element only
+            if(i === 0 && item.rotationDir !== 0 && item.beatPlayhead%4 === 0) {
+                item.instrument.env.trigger = 1;
+                rootF = random(rootFrequencies);
+                playingItems++;
+            } else {
+              item.instrument.env.trigger = 0;
+            }
+            //trigger the enveloppe when it is rotating
+            for(var j = 0; j < 4; j++) {
+              if(item.beatPlayhead%4 === j && item.childs[j].rotationDir !== 0) {
+                item.childs[j].instrument.env.trigger = 1;
+                playingItems++;
+              } else {
+                item.childs[j].instrument.env.trigger = 0;
+              }
+            }
+
+            item.beatPlayhead++;
+          }
+          //again special case root element
+          if(i === 0) {
+            globalout = item.instrument.play(rootF);
+          }
+
+          var out1 = item.childs[0].instrument.play(100*(item.generation+1));
+          var out2 = item.childs[1].instrument.play(100*(item.generation+1));
+          var out3 = item.childs[2].instrument.play(100*(item.generation+1));
+          var out4 = item.childs[3].instrument.play(100*(item.generation+1));
+
+          globalout += (out1 + out2 + out3 + out4);
+        }
+      }
+
+      globalout *= 1/playingItems;
+      maxiAudio.output[0] = globalout;
+      maxiAudio.output[1] = globalout;
+
+    }
+  }
+</script>
+<!-- we need maxiLib initialize before using that because every item has an Instrument which uses maxiLib osc, env etc...-->
+<script src="{{site.baseurl}}/js/sound/examples/chaos_drum_machine_01/item.js" type="text/javascript"></script>
+<script>
+
+  //this is p5 code
+  function setup() {
+
+    //Create some GUI elements
+    var p0 = createP("Chaos drum machine").addClass("title");
+    p0.parent('canvas-container');
+    //Need a variable for the canvas - we want the mousePressed only triggered for the canvas and not for the other GUI elements
+    var myCanvas = createCanvas(640, 360);
+    myCanvas.parent('canvas-container');
+    myCanvas.mousePressed(canvasMousePressed);
+
+    var p1 = createP("Click to reset rotation values and random osc wave types");
+    p1.parent('canvas-container');
+
+    drawType = createRadio();
+    drawType.style("align-self", "center");
+    drawType.option("Squares", "SQUARES");
+    drawType.option("Circles", "CIRCLES");
+    drawType.value("SQUARES");
+
+    drawType.parent('canvas-container');
+
+    //initial things
+    noFill();
+    aStep = 0;
+    pattern = new Pattern();
+    pattern.items = [];
+    pattern.startAngle = 0;
+
+    //create the root element which has a special cas instrument as well
+    pattern.create(createVector(0, 0), 150, 255, 0, null, 0);
+    pattern.items[0].instrument = new Instrument(25, 200, 1, 700, -20, -7);
+    pattern.items[0].instrument.oscType1 = pattern.items[0].instrument.oscType2 = pattern.items[0].instrument.oscType3 = "sinewave";
+
+  }
+
+  //clear the rotation values for all elements in the pattern
+  function canvasMousePressed() {
+    pattern.clearRotation();
+    return false;
+  }
+  function draw() {
+    //minimal trace effect alpha value
+    background(0, 90);
+    //come to the center
+    translate(width/2, height/2);
+
+    //pulsate in/out the hole pattern with setting the root element size differently
+    pattern.items[0].radius = map(sin(radians(aStep)), -1, 1, 150, 250);
+    pattern.update();
+    pattern.render();
+    //sin already has an acceleration effect - so increment only a step value
+    aStep+=0.25;
+
+}
+
+</script>
+<p>
+  Code source on <a href="https://github.com/MichaPau/CodeExamples/tree/master/sound/Chaos_drum_machine" target="_blank">github</a>
+</p>
